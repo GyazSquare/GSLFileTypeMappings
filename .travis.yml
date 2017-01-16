@@ -1,0 +1,12 @@
+language: objective-c
+osx_image: xcode8.2
+xcode_project: GSLFileTypeMappings.xcodeproj
+xcode_scheme: GSLFileTypeMappings
+xcode_sdk: iphonesimulator10.2
+before_install:
+- gem install xcpretty
+script:
+- ./scripts/travis-run-tests.sh | xcpretty -c
+notifications:
+  slack:
+    secure: GwUuZphazJtREzZaDv6l510gCJ9XpAZz3mFHHcYgyVCC+D3nlzuacakzocU0tOCG/dEa7GnQn3IeRPAQwBRusHm+WEwLteSgObmsfrcztrxvKpqiMTizmlZt8Bb+oiFZ3y2wFqzZ/2pPufZtUo/7eHJp9cIduXCMnFEwjvocDxDa1IDvGOvdy1wnvsTDLVqs9Zxg7mOgPnR1KitZW+8i8mXDqrUt5TiIFpHAFuoW2TMK7eHWbSZD/koFqS4JLZyaqI0nxDC4ai6+kGhEyTHx9zmKyrszbQzhhyvRh7XmnYhQR4Ljv1qNrqRPgMcq2tSAtbbSIW9eLgscis4hAwPSdq9SIZs3V/haqmEAZNODgi0Yoc9mgG0nLoaak1xYYp0KwTSNPmU41IypiqtqamY/IB/1QbxNDsS0nFMGhBS5WQSbjq5sacR7QEsn3b99lA3+6Hoeqzmi3c7CzMNjG3q2pD4IlI9rNjQ3P31myTA7u5jypKF64a52hyENuFNDMcITnZ4yMy6xiWyLcb9Ka8f8zT8ue/YrcKBvBdHC/2S01oIx7kBGr9i0zjt/NRnfRcPSTwrIcLOM3X+Si/iY+R6Agu5AYmxpGtTyCV9JKFwOXpR/+hSzONdQYQmXo7SCg5kj2Y2YWu1/fsmZTvNWPCTzqPSggdFm6mXNcpENXAC2+II=
