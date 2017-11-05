@@ -251,7 +251,13 @@
     }
     // wav
     {
-        XCTAssertEqualObjects(@"audio/wav", [sharedFileTypeMappings MIMETypeForExtension:@"wav"]);
+        NSString *expected;
+        if (@available(macOS 10.13, iOS 11.0, watchOS 4.0, tvOS 11.0, *)) {
+            expected = @"audio/vnd.wave";
+        } else {
+            expected = @"audio/wav";
+        }
+        XCTAssertEqualObjects([sharedFileTypeMappings MIMETypeForExtension:@"wav"], expected);
     }
     // m4v
     {
