@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = 'GSLFileTypeMappings'
-  s.version      = '1.1.0'
+  s.version      = '2.0.0'
   s.author       = 'GyazSquare'
   s.license      = { :type => 'MIT' }
   s.homepage     = 'https://github.com/GyazSquare/GSLFileTypeMappings'
-  s.source       = { :git => 'https://github.com/GyazSquare/GSLFileTypeMappings.git', :tag => 'v1.1.0' }
+  s.source       = { :git => 'https://github.com/GyazSquare/GSLFileTypeMappings.git', :tag => 'v2.0.0' }
   s.summary      = 'A simple file type mapping library for iOS, OS X, watchOS and tvOS.'
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.6'
@@ -15,5 +15,6 @@ Pod::Spec.new do |s|
   s.ios.framework = 'MobileCoreServices'
   s.tvos.framework = 'MobileCoreServices'
   s.watchos.framework = 'MobileCoreServices'
+  s.module_name = 'GSL'
   s.source_files  = 'GSLFileTypeMappings/*.{h,m}'
 end
