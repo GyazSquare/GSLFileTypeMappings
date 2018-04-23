@@ -2,12 +2,12 @@
 
 [![Build Status](https://travis-ci.org/GyazSquare/GSLFileTypeMappings.svg?branch=master)](https://travis-ci.org/GyazSquare/GSLFileTypeMappings)
 
-GSLFileTypeMappings is a simple Objective-C library for iOS, OS X, watchOS and tvOS, which converts between a filename extension and a MIME type.
+GSLFileTypeMappings is a simple Objective-C library for iOS, macOS, watchOS and tvOS, which converts between a filename extension and a MIME type.
 
 ## Requirements
 
-* Xcode 9.2 or later
-* Base SDK: iOS 11.2 / OS X 10.13.2 / watchOS 4.2 / tvOS 11.2 or later
+* Xcode 9.3 or later
+* Base SDK: iOS 11.2 / macOS 10.13.2 / watchOS 4.2 / tvOS 11.2 or later
 * Deployment Target: iOS 8.0 / OS X 10.6 / watchOS 2.0 / tvOS 9.0 or later
 
 ## Installation
