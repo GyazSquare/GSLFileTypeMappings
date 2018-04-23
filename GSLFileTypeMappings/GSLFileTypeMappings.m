@@ -27,14 +27,12 @@ GSLSynthesizeSingleton(GSL, FileTypeMappings);
     if (!UTI) {
         return nil;
     }
-    CFArrayRef (*UTTypeCopyAllTagsWithClassPtr)(CFStringRef, CFStringRef);
-    UTTypeCopyAllTagsWithClassPtr = UTTypeCopyAllTagsWithClass;
     CFArrayRef extensions;
-    if (UTTypeCopyAllTagsWithClassPtr) {
-        // OS X 10.10 / iOS 8.0 / watchOS 2.0 or later
-        extensions = (*UTTypeCopyAllTagsWithClassPtr)(UTI, kUTTagClassFilenameExtension);
+    if (@available(iOS 8.0, macOS 10.10, tvOS 9.0, watchOS 2.0, *)) {
+        // iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
+        extensions = UTTypeCopyAllTagsWithClass(UTI, kUTTagClassFilenameExtension);
     } else {
-        // OS X 10.9.x / iOS 7.x or earlier
+        // macOS 10.6-10.10
         CFStringRef extension = UTTypeCopyPreferredTagWithClass(UTI, kUTTagClassFilenameExtension);
         CFIndex numValues = extension ? 1 : 0;
         extensions = CFArrayCreate(NULL, (void *)&extension, numValues, &kCFTypeArrayCallBacks);
