@@ -15,6 +15,5 @@ Pod::Spec.new do |s|
   s.ios.framework = 'MobileCoreServices'
   s.tvos.framework = 'MobileCoreServices'
   s.watchos.framework = 'MobileCoreServices'
-  s.module_name  = 'GSL'
   s.source_files = 'GSLFileTypeMappings/*.{h,m}'
 end
