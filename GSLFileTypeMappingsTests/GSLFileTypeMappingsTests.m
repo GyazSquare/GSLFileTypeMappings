@@ -98,7 +98,7 @@
     // audio/aiff
     {
         NSArray *extensions = [sharedFileTypeMappings extensionsForMIMEType:@"audio/aiff"];
-        XCTAssertTrue([extensions containsObject:@"aifc"]);
+        XCTAssertTrue([extensions containsObject:@"aiff"]);
     }
     // audio/wav
     {
@@ -183,7 +183,7 @@
     }
     // audio/aiff
     {
-        XCTAssertEqualObjects(@"aifc", [sharedFileTypeMappings preferredExtensionForMIMEType:@"audio/aiff"]);
+        XCTAssertEqualObjects(@"aiff", [sharedFileTypeMappings preferredExtensionForMIMEType:@"audio/aiff"]);
     }
     // audio/wav
     {

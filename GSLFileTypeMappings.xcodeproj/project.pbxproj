@@ -11,7 +11,7 @@
 		D730BE571A2B0580000A5D02 /* GSLFileTypeMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = D730BE561A2B0580000A5D02 /* GSLFileTypeMappings.m */; };
 		D730BE5D1A2B0580000A5D02 /* libGSLFileTypeMappings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D730BE511A2B0580000A5D02 /* libGSLFileTypeMappings.a */; };
 		D77877051A2B3C3600172318 /* GSLFileTypeMappingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D77877041A2B3C3600172318 /* GSLFileTypeMappingsTests.m */; };
-		D77877091A2B3EDE00172318 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D77877061A2B3D2700172318 /* MobileCoreServices.framework */; };
+		D7BE772F2600C16B00E5BF48 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BE772E2600C16B00E5BF48 /* CoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +46,7 @@
 		D75B08681AA885B80011B798 /* GSLSynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLSynthesizeSingleton.h; sourceTree = "<group>"; };
 		D77877041A2B3C3600172318 /* GSLFileTypeMappingsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLFileTypeMappingsTests.m; sourceTree = "<group>"; };
 		D77877061A2B3D2700172318 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D7BE772E2600C16B00E5BF48 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7BE772F2600C16B00E5BF48 /* CoreServices.framework in Frameworks */,
 				D730BE5D1A2B0580000A5D02 /* libGSLFileTypeMappings.a in Frameworks */,
-				D77877091A2B3EDE00172318 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +127,7 @@
 		D77877081A2B3DB700172318 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7BE772E2600C16B00E5BF48 /* CoreServices.framework */,
 				D77877061A2B3D2700172318 /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
@@ -175,7 +177,7 @@
 		D730BE491A2B0580000A5D02 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = GyazSquare;
 				TargetAttributes = {
 					D730BE501A2B0580000A5D02 = {
@@ -192,6 +194,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = D730BE481A2B0580000A5D02;
 			productRefGroup = D730BE521A2B0580000A5D02 /* Products */;
@@ -264,6 +267,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -287,7 +291,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -316,6 +320,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -332,7 +337,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
