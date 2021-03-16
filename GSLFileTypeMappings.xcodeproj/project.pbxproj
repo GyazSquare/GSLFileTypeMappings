@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,8 @@
 		D730BE571A2B0580000A5D02 /* GSLFileTypeMappings.m in Sources */ = {isa = PBXBuildFile; fileRef = D730BE561A2B0580000A5D02 /* GSLFileTypeMappings.m */; };
 		D730BE5D1A2B0580000A5D02 /* libGSLFileTypeMappings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D730BE511A2B0580000A5D02 /* libGSLFileTypeMappings.a */; };
 		D77877051A2B3C3600172318 /* GSLFileTypeMappingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D77877041A2B3C3600172318 /* GSLFileTypeMappingsTests.m */; };
-		D7BE772F2600C16B00E5BF48 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BE772E2600C16B00E5BF48 /* CoreServices.framework */; };
+		D7BE772F2600C16B00E5BF48 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BE772E2600C16B00E5BF48 /* CoreServices.framework */; platformFilter = maccatalyst; };
+		D7BE77392600D51400E5BF48 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7BE77382600D51400E5BF48 /* MobileCoreServices.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D77877041A2B3C3600172318 /* GSLFileTypeMappingsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLFileTypeMappingsTests.m; sourceTree = "<group>"; };
 		D77877061A2B3D2700172318 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D7BE772E2600C16B00E5BF48 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		D7BE77382600D51400E5BF48 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX11.1.sdk/System/iOSSupport/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7BE772F2600C16B00E5BF48 /* CoreServices.framework in Frameworks */,
+				D7BE77392600D51400E5BF48 /* MobileCoreServices.framework in Frameworks */,
 				D730BE5D1A2B0580000A5D02 /* libGSLFileTypeMappings.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +130,7 @@
 		D77877081A2B3DB700172318 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7BE77382600D51400E5BF48 /* MobileCoreServices.framework */,
 				D7BE772E2600C16B00E5BF48 /* CoreServices.framework */,
 				D77877061A2B3D2700172318 /* MobileCoreServices.framework */,
 			);
@@ -366,7 +370,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = GSLFileTypeMappingsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gyazsquare.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -376,7 +384,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = GSLFileTypeMappingsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gyazsquare.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -8,7 +8,11 @@
 #import "GSLFileTypeMappings.h"
 #import "GSLSynthesizeSingleton.h"
 
+#if !defined(TARGET_OS_IPHONE) || !TARGET_OS_IPHONE
 @import CoreServices;
+#else
+#import <MobileCoreServices/MobileCoreServices.h>
+#endif
 
 @implementation GSLFileTypeMappings
 
