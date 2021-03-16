@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.dependency 'GSLSynthesizeSingleton'
   s.requires_arc = true
   s.ios.framework = 'MobileCoreServices'
+  s.osx.framework = 'CoreServices'
   s.tvos.framework = 'MobileCoreServices'
   s.watchos.framework = 'MobileCoreServices'
   s.source_files = 'GSLFileTypeMappings/*.{h,m}'
